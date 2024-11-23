@@ -25,4 +25,7 @@ public class StudentCourse {
     @Column(name = "grade_id")
     private Integer gradeId;
 
+    @Column(name = "comments")
+    private String comments;
+
 }

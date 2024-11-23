@@ -3,11 +3,14 @@ package com.rishika.esdminiproject.controller;
 import com.fasterxml.jackson.databind.JsonNode;
 
 import com.rishika.esdminiproject.dto.EmployeeRequest;
+import com.rishika.esdminiproject.entity.Student;
 import com.rishika.esdminiproject.service.EmployeeService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
@@ -20,5 +23,7 @@ public class EmployeeController {
     public ResponseEntity<String> createEmployee(@RequestBody @Valid EmployeeRequest request) {
         return ResponseEntity.ok(employeeService.createEmployee(request));
     }
+
+
 }
 

@@ -39,7 +39,7 @@ public class EmployeeService implements UserDetailsService{
 
     public String createEmployee(EmployeeRequest request) {
         String encryptedPassword = passwordEncoder.encode(request.password());
-        Department department = departmentRepository.findById(request.departmentId())
+        Department department = departmentRepository.findByDepartmentId(request.departmentId())
                 .orElseThrow(() -> new ResourceNotFoundException("Department not found"));
         Employee employee = mapper.toEntity(request,department,encryptedPassword);
         repo.save(employee);

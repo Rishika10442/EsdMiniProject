@@ -32,7 +32,7 @@ public class Course {
     @Column(name = "faculty", length = 100)
     private String faculty;
 
-    @Column(name = "credits", precision = 3, scale = 1)
+    @Column(name = "credits")
     private int credits;
 
     @Column(name = "capacity")

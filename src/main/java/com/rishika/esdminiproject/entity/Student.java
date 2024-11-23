@@ -28,7 +28,7 @@ public class Student {
     @Column(name = "photograph_path", length = 255, columnDefinition = "VARCHAR(255) DEFAULT NULL")
     private String photographPath;
 
-    @Column(name = "cgpa", precision = 3, scale = 2)
+    @Column(name = "cgpa")
     private float cgpa;
 
     @Column(name = "total_credits")
