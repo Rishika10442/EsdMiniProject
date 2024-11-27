@@ -14,8 +14,8 @@ public interface StudentRepo extends JpaRepository<Student, Long>{
     @Query("SELECT new com.rishika.esdminiproject.dto.StudentDetails(" +
             "s, d.program, sp.name) " +
             "FROM Student s " +
-            "JOIN s.domain d " +
-            "JOIN s.specialisation sp")
+            "LEFT JOIN s.domain d " +
+            "LEFT JOIN s.specialisation sp")
     List<StudentDetails> fetchStudentsWithDomainAndSpecialisation();
 
     @Query("SELECT new com.rishika.esdminiproject.dto.StudentDetails(" +

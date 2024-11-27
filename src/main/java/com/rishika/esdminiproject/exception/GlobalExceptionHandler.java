@@ -13,7 +13,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(ResourceNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     @ResponseBody
-    public String handleCustomerNotFoundException(ResourceNotFoundException ex) {
+    public String handleResourceNotFoundException(ResourceNotFoundException ex) {
         return "Error: Resource not found " + ex.getMessage();
     }
 
